@@ -1,0 +1,724 @@
+/* FOOTER */
+#myFooter {
+  background-color: rgb(57, 72, 76);
+  color: white;
+  width: 100%;
+
+}
+
+#myFooter .logo img {
+  height: 90px;
+  width: 90px;
+  
+}
+
+#myFooter .footer-copyright {
+  background-color: rgb(0, 0, 0, 0.6);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+
+#myFooter .footerText h3 {
+  font-family: Ubuntu;
+  text-align: center;
+}
+
+#myFooter .footerText p {
+  font-size: 14px;
+  font-family: Ubuntu;
+  text-align: center;
+}
+
+
+#myFooter .footer-copyright p {
+  margin: 10px;
+  color: #ccc;
+}
+
+
+#myFooter .social-networks {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+  font-size: 32px;
+  color: #f9f9f9;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+  text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+  color: #0077e2;
+}
+
+#myFooter .gmail:hover {
+  color: #ef1a1a;
+}
+
+#myFooter .github:hover {
+  color: black;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* LOGIN MODAL */
+.modal input[type=text], input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 8px 12px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.modal .container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 21; /* Sit on top */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50% /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* SIGNUP MODAL */
+
+/* Full-width input fields */
+.modal input[type=text], input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Add a background color when the inputs get focus */
+.modal input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 8px 12px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.modal .container {
+  padding: 10px;
+  width: 500px;
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 21; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgba(71, 78, 93, 0.7);
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* CLOCK */
+.clock{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  margin: auto;
+  position: relative;
+  border:20px solid #ffb880;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+
+
+}
+.center{
+  background-color: #000;
+  position: absolute;
+  left: calc(50% - 10px);
+  top:  calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 20;
+}
+.hourHand{
+  width: 10px;
+  height: 75px;
+  background-color: #000;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: 57px;
+  left: 126px;
+  z-index: 10;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transform: rotate(360deg);
+
+}
+.minuteHand{
+  width: 5px;
+  height: 120px;
+  background-color: #000;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: 13px;
+  left: 128px;
+  z-index: 9;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transform: rotate(90deg);
+
+}
+.secondHand{
+  width: 2px;
+  height: 120px;
+  background-color:red;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  position: absolute;
+  top: 14px;
+  left: 130px;
+  transition: all 0.06s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  z-index: 8;  
+    transform: rotate(360deg);
+
+}
+.time{
+  position: absolute;
+  top: 58%;
+  left: 10%;
+  border: 1px solid #fff8dc;
+  background-color: #fff;
+  padding: 0px;
+  display: block;
+  box-shadow: inset 0px 2px 5px rgba(0,0,0,.4);
+  border-radius: 5px;
+  min-width: 84px;
+  height: 31px;
+  margin-top: -35px;
+
+}
+.time small{
+  color:red;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.clock ul{
+  list-style: none;
+  padding: 0;
+
+}
+.clock ul li{
+  position: absolute;
+  width:20px;
+  height:20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  color:red;
+}
+.clock ul li:nth-child(1){
+  right: 22%;
+  top:6.5%;
+}
+.clock ul li:nth-child(2){
+  right: 6%;
+  top:25%;
+}
+.clock ul li:nth-child(3){
+  right: 1%;
+  top:calc(50% - 10px);
+  color:#000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.clock ul li:nth-child(4){
+  right: 6%;
+  top:69%;
+}
+.clock ul li:nth-child(5){
+  right: 22%;
+  top:84%;
+}
+.clock ul li:nth-child(6){
+  right: calc(50% - 10px);
+  top:calc(99% - 20px);
+  color:#000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.clock ul li:nth-child(7){
+  left: 22%;
+  top:84%;
+}
+.clock ul li:nth-child(8){
+  left: 6%;
+  top:69%;
+}
+.clock ul li:nth-child(9){
+  left: 1%;
+  top:calc(50% - 10px);
+  color:#000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.clock ul li:nth-child(10){
+  left: 6%;
+  top:25%;
+}
+.clock ul li:nth-child(11){
+  left: 22%;
+  top:6.5%;
+}
+.clock ul li:nth-child(12){
+  right: calc(50% - 10px);
+  top:1%;
+  color:#000;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.navbar{
+  margin-bottom: 0px;
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #aef7ee;
+  height: 750px;
+}
+.hero-text {
+  font-family: 'Lato', sans-serif;
+  color: #3a3e3c;
+  font-weight: bold;
+  padding: 5%;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  color: #3a3e3c;
+
+
+}
+.hero-text p{
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  color: #3a3e3c;
+}
+
+.hero-image img{
+  max-width: 50%;
+}
+
+.hero-image {
+  text-align: center;
+  
+}
+
+.hero-column {
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+.bg-body {
+    background-color: #eeedee;
+    height: 100%;
+    
+}
+.bg-body h1,h2{ 
+    margin-top: 0px;
+    padding-top: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #3a3e3c;
+    text-align: center;
+}
+.todo{
+    display: flex;
+    flex-direction: row;
+}
+.todo-list {
+    text-align: center;
+    flex-grow: 2; 
+}
+.todo-list h3{
+    font-family: 'Lato', sans-serif;
+    color: #3a3e3c;
+    text-align: center; 
+}
+
+/* CALENDER - datepicker */
+  html {
+    font-size: 18px;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  .todo-datepicker{
+      width: 30%;
+  }
+  .datepicker {
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    overflow: hidden;
+  }
+  .datepicker .datepicker-header {
+    height: 250px;
+    background-image: url(images/calendar.jpg);
+    background-size: 100%;
+  }
+  .datepicker .ui-datepicker-inline {
+    padding: 30px;
+  }
+  .datepicker .ui-datepicker-header {
+    text-align: center;
+    padding-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+  .datepicker .ui-datepicker-header .ui-datepicker-prev,
+  .datepicker .ui-datepicker-header .ui-datepicker-next {
+    display: inline;
+    float: left;
+    cursor: pointer;
+    font-size: 1.4em;
+    padding: 0 10px;
+    margin-top: -10px;
+    color: #CCC;
+  }
+  .datepicker .ui-datepicker-header .ui-datepicker-next {
+    float: right;
+  }
+  .datepicker .ui-datepicker-calendar {
+    width: 100%;
+    text-align: center;
+  }
+  .datepicker .ui-datepicker-calendar thead {
+    color: #CCC;
+  }
+  .datepicker .ui-datepicker-calendar tr th, .datepicker .ui-datepicker-calendar tr td {
+    padding-bottom: .5em;
+  }
+  .datepicker .ui-datepicker-calendar a {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  .datepicker .ui-datepicker-calendar .ui-state-highlight {
+    border-color: #D24D57;
+    color: #D24D57;
+  }
+ /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+  
+ .list-group li,ul{
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    text-align: left;
+    line-height: 2.5em;
+  }
+  .todo-buttons{
+    position: absolute;
+    right: 15%;
+  }
+  .todo-content{
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #3a3e3c;
+  }
+  .input-group{
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+  }
+  .form-control{
+    margin-bottom: 5px;
+  }
+  
+  .btn{
+    width: 75px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding:5px;
+  
+  }
+  
+  .input-group-btn{
+    width: 0px;
+  }
+
+  /* Animation for add-todos button */
+  ::selection {
+    background: #77c1c4;
+  }
+  .svg-wrapper {
+    margin: auto;
+    width: 250px;
+    text-align: center;
+    
+  }
+  .shape1,
+  .shape2 {
+    stroke-dasharray: 1120;
+    stroke-width: 5px;
+    fill: #fff;
+    stroke: #77c1c4;
+    transition-timing-function: linear;
+    transition: stroke-dashoffset 4s, stroke-dasharray 4s;
+  }
+  .shape1 {
+    stroke-dashoffset: 1120;
+    
+  }
+  .shape2 {
+    stroke-dashoffset: -1120;
+  }
+  .text {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0px;
+    color: #3a3e3c;
+    top: -52px;
+    position: relative;
+    text-align: center;
+    height: 50px;
+    cursor: pointer;
+    
+  }
+  .svg-wrapper:hover .shape1,
+  .svg-wrapper:hover .shape2 {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1120;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+  
+.todo-panel-hidden {
+  display: none;
+}
+
+.todo-panel-visible {
+  display: block;
+  margin: auto;
+  width: 64%;
+  margin-bottom: 10px;
+}
+.todo-button-hide{
+  margin-top: 200px;
+}
+input:invalid {
+  border: 2px solid red;
+}
+.saveInputField {
+  width: 400px;
+}
+.todo-date {
+  font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #3a3e3c;
+    padding: 5px;
+}
+.change-input-group-hidden{
+  display: none;
+}
+.change-input-group-visible{
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-top: 5px;
+}

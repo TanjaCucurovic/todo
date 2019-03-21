@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Todos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="toDo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      
+
+    </script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script>
+            $(document).ready(function() {
+            $(".datepicker").datepicker({
+            prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+            nextText: '<i class="fa fa-fw fa-angle-right"></i>'
+            });
+            });
+        </script>
+    
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="#">My Todos</a>
+            </div>
+             <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" onclick="document.getElementById('signUp').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <div id="signUp" class="modal">
+                    <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content">
+                      <div class="container">
+                        <h1>Sign Up</h1>
+                        <p>Please fill in this form to create an account.</p>
+                        <hr>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                        
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                        </label>
+                  
+                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                  
+                        <div class="clearfix">
+                          <button type="button" onclick="document.getElementById('signUp').style.display='none'" class="cancelbtn">Cancel</button>
+                          <button type="submit" class="signupbtn">Sign Up</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                <li><a href="#" onclick="document.getElementById('id01').style.display='block'" ><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <div id="id01" class="modal">
+  
+                    <form class="modal-content animate">
+                      <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="images/login.png" alt="Avatar" class="avatar">
+                      </div>
+                  
+                      <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                          
+                        <button type="submit">Login</button>
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                      </div>
+                  
+                      <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                      </div>
+                    </form>
+                  </div>
+            </ul>
+        </div>
+    </nav>    
+    
+    <div class="hero">
+        <div class="hero-text hero-column">
+                <div class="clock">
+                        <div class="hourHand"></div>
+                        <div class="minuteHand"></div>
+                        <div class="secondHand"></div>
+                        <div class="center"></div>
+                        <div class="time"></div>
+                        <ul>
+                            <li><span>1</span></li>
+                            <li><span>2</span></li>
+                            <li><span>3</span></li>
+                            <li><span>4</span></li>
+                            <li><span>5</span></li>
+                            <li><span>6</span></li>
+                            <li><span>7</span></li>
+                            <li><span>8</span></li>
+                            <li><span>9</span></li>
+                            <li><span>10</span></li>
+                            <li><span>11</span></li>
+                            <li><span>12</span></li>
+                        </ul>
+                    </div>
+            <h1>Organize and share your to-do, work, grocery, movies and household lists.</h1>
+            <p>No matter what you’re planning, how big or small the task may be,<br> TO-DO list makes it super easy to get stuff done.</p>
+        </div>
+        <div class="hero-image hero-column">
+            <img src="images/header.jpg" />
+        </div>
+    </div>
+
+    <div class="bg-body">
+        <h1>Make your life easier with TO-DO List</h1>
+        <h2>Organize your life now</h2>
+      <div class="todo"> 
+       <div class="todo-datepicker">  
+        <div id="datepicker" class='datepicker'>
+            <div class="datepicker-header"></div>
+        </div>
+        </div>
+        <div class="todo-list" >
+            <div id="todo-button-hide" class="todo-button-hide">
+            <h3>Click button and start your TO-DO list</h3>
+            <div class="svg-wrapper" >
+                    <svg height="50" width="250" >
+                      <rect class="shape1" height="50" width="250" />
+                      <rect class="shape2" height="50" width="250" />
+                      <a href="#"><div onclick="toggle_visibility('foo');" class="text">Make your TO-DO</div></a>
+                    </svg>
+            </div>
+        </div>
+
+            <div class="my-todos" id="foo" style="display:none;">
+                    <h3>My Todos</h3>
+
+                    <div class="todo-form-group">
+                      <button onclick=handlers.toggleAll() class="btn btn-secundary" type="button">Toggle All</button>
+                    </div>
+                    <div class="input-group">
+                        <form class="input-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="date" class="form-control" id="addTodoDateInput"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="addTodoTextInput" placeholder="enter your todos" required />
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="input-group-btn">
+                                        <input onclick=handlers.addTodo() class="btn btn-info" type="submit" />
+                                    </span>
+                                </div>
+                            </div>     
+                        </form>
+                    </div>
+                    <div id="change-input-group" class="change-input-group-hidden input-group">
+                        <form class="input-group">
+                            <div class="row" >
+                                <div class="col-md-4">
+                                    <input type="date" class="form-control" id="changeTodoDateInput"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="hidden" value="" class="form-control" id="changeTodoPositionInput" />
+                                    <input type="text" class="form-control" id="changeTodoTextInput"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="input-group-btn">
+                                        <button onclick=handlers.changeTodo() class="btn btn-success" type="button">Save</button>
+                                    </span>
+                                </div>
+                            </div>     
+                        </form>
+                    </div>
+                    <div id="todo-panel" class="panel panel-default todo-panel-hidden">
+                            <div class="panel-heading">My TO-DO List</div>
+                                <div class="panel-body">
+                                    <ul id="list-group">
+                                        
+                                    </ul>
+                                </div>
+                    </div>           
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+    <footer id="myFooter" class="myFooter">
+        <div class="container">
+          <div class="row">
+            <div id="contact" class="anchor"></div>
+            <div class="col-sm-4">
+              <div class="logo"><img src="images/logo.png"></div>
+            </div>
+            <div class="col-sm-4">
+              <div class="footerText">
+                <h3>Use your todos wisely!</h3>
+                <p>You can reach me on the following networks</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="social-networks">
+                <a href="https://github.com/TanjaCucurovic" target="_blank" class="github"><i class="fa fa-github"></i></a>
+                <a href="https://www.facebook.com/tanja.cucurovic" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="mailto:tanja.cucurovic@gmail.com" class="gmail"><i class="fa fa-google-plus"></i></a>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2019 Tanja Čučurović </p>
+        </div>
+      </footer>
+
+
+    <script type="text/javascript" src="toDO.js"></script>
+
+</body>
+
+
+
+</html>
